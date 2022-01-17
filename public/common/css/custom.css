@@ -1,0 +1,201 @@
+/*Custom CSS SPICK AND SPACK*/
+.section-padding-lg-9-9{
+	padding: 9rem 0 9rem;
+}
+
+.menu-layout1{
+	box-shadow: 0px 5px 5px 0px rgb(0 0 0 / 20%);
+}
+.with-errors{
+	color: red;
+}
+
+.invalid-feedback{
+	display: block;
+}
+
+form .form-group .error {
+    border-color: #f44336;
+}
+.star-checked{
+	color: #ff8f00 !important;
+}
+
+.admin-star-checked{
+	color: #ffd700 !important;
+}
+
+/*Toastr CSS*/
+#toast-container > .toast-success {
+     opacity: 1 !important;
+     font-size: 1.5rem !important;
+}
+
+#toast-container > .toast-error {
+    opacity: 1 !important;
+    font-size: 1.5rem !important;
+}
+
+#toast-container > .toast-info {
+    opacity: 1 !important;
+    font-size: 1.5rem !important;
+}
+
+.slider-paragraph{
+	color: white !important;
+}
+
+.footer-bottom-box .footer-bottom-menu ul li:after 
+{
+	content: '';
+}
+
+.black_color,
+.black_color:hover
+{
+	color: black;
+}
+
+.estimate_amount_box
+{
+	background: #fff779;
+}
+
+.estimate_span
+{
+	font-weight: bold;
+    color: #15297c;
+}
+
+.estimate_amount
+{
+	font-size: 30px;
+}
+
+.logo_header_image
+{
+	width: 100px !important;
+}
+
+.logo_footer_image
+{
+	width: 100px !important;
+}
+.logo_mobile_image
+{
+	width:  60px !important;
+}
+.footer_href
+{
+	margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+.c-m-lg-5 
+{
+	margin: 0rem 5rem !important;
+}
+
+
+
+/* Quiz System Css */
+.product_modal_title
+{
+	font-weight: bold !important;
+}
+
+.custom_display_none
+{
+	display: none;
+}
+
+#preloader {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #fefefe;
+	z-index: 99;
+	height: 100%;
+}
+		
+#status {
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	left: 10vh;
+	top: 10vh;
+	background-image: url(ajax-loader.gif);
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: -100px 0 0 -100px;
+}
+
+.loader{
+	margin: 200px auto;
+	width: 10vh;
+	height: 10vh;
+	border-radius: 50%;
+	border: 15px solid white;
+	border-top: 15px solid #1abc9c;
+	animation: spin 2s linear infinite;
+}
+
+.span_label
+{
+	margin-bottom: 2px;
+}
+
+
+.delete_btn_margin
+{
+	margin-top: 5px;
+}
+
+
+.correct_option_input
+{
+	visibility: hidden;
+}
+
+.bs_spinner_border
+{
+	width: 1rem;
+	height: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 375px) {
+  	.c-m-lg-5 
+  	{
+    	margin: 0px !important;
+  	}
+}
+
+
+@keyframes spin{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}

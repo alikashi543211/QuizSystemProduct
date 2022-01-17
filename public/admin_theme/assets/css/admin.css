@@ -1,0 +1,89 @@
+.h1,
+.h2,
+.h3,
+.h4,
+body,
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Quicksand;
+    font-weight: 400;
+}
+.table thead th {
+    border-top-width: 1px !important;
+    color: #000 !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+}
+.table>tbody>tr>td {
+    font-weight: 500;
+}
+.card-title,
+.error {
+    font-weight: bold;
+}
+.form-control {
+    border: 1px solid #e7e7e7;
+    border-radius: 0px;
+    padding: 4px 10px;
+}
+input.form-control,
+textarea.form-control,
+select.form-control{
+    background-image: none !important;
+}
+input.form-control,
+select.form-control {
+    height: calc(2.4375rem + 1px) !important;
+}
+label,
+.bmd-label-static{
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+    color: #000;
+}
+.select2-hidden-accessible{
+    display: none;
+}
+.select2-container,
+.select2-container--default .select2-selection--single,
+.select2-container .select2-selection--single,
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: calc(2.4375rem + 1px) !important;
+    border-radius: 0px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: calc(2.4375rem + 1px) !important;
+}
+.table.dataTable tbody tr.selected,
+table.dataTable tbody th.selected,
+table.dataTable tbody td.selected {
+    color: #333333 !important;
+}
+table.dataTable tbody > tr.selected,
+table.dataTable tbody > tr > .selected{
+    background-color: #e7e7e7;
+}
+.fileinput .thumbnail.img-circle{
+    height: 100px;
+}
+.fileinput .thumbnail > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+input[type=file] {
+    z-index: 0 !important;
+}
+input[type=file].form-control {
+    opacity: 1;
+    position: relative;
+    z-index: 0;
+}
