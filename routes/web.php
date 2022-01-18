@@ -36,6 +36,13 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth','a
         Route::get('edit/{id}', 'McqController@edit')->name('edit');
         Route::get('delete/{id}', 'McqController@delete')->name('delete');
     });
+
+    // Ajax Routes
+    Route::name('ajax.')->prefix('load')->group(function () {
+        Route::name('mcq.')->prefix('mcq')->group(function () {
+            Route::get('load-list', 'McqController@loadList')->name('list');
+        });
+    });
     
 
 });

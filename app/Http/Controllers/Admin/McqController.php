@@ -89,4 +89,17 @@ class McqController extends Controller
     {
         dd($id);
     }
+
+
+
+
+    // Ajax Functions
+    function loadList()
+    {
+        $mcq_list = Question::where('type', '1')
+            ->orderBy('id', 'desc')
+            ->get();
+        return view("ajax.admin.mcq.list", get_defined_vars());
+    }
+
 }

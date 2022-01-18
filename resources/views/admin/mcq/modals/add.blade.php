@@ -2,7 +2,7 @@
 <div class="modal fade" id="add_mcq_modal" role="dialog">
     <div class="modal-dialog modal-md">
     <!-- Modal content-->
-        <form class="add-mcq-modal-form" method="POST" action="{{ route('admin.mcq.save') }}">
+        <form class="add-mcq-modal-form" method="POST" action="{{ route('admin.mcq.save') }}" data-list-url="{{ route('admin.ajax.mcq.list') }}">
             @csrf
             <input type="hidden" class="modal_step" value="1" >
             <div class="modal-content">

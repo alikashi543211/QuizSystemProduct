@@ -815,6 +815,13 @@ function showSweetAlertPopup($alert_type, $msg, $title)
 
 
 
+
+
+
+
+
+
+
 function onSubmitMcqAddForm()
 {
     $(document).on("submit", ".add-mcq-modal-form",  function(e){
@@ -840,6 +847,7 @@ function onSubmitMcqAddForm()
             $url = $(this).attr("action");
             $submit_btn = $("#add_mcq_modal .next_button_question_modal");
             $close_btn = $("#add_mcq_modal .close_modal_button");
+            $list_url = $(this).attr("data-list-url");
             $.ajax({
 
                 url: $url,
@@ -865,6 +873,7 @@ function onSubmitMcqAddForm()
                         $submit_btn.html("Submit");
                         $("#add_mcq_modal").modal("hide");
                         showSweetAlertPopup("success", response.success, "Success");
+                        updateOurTableData($list_url);
                         
                     }else
                     {
@@ -885,6 +894,69 @@ function onSubmitMcqAddForm()
 
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function updateOurTableData($url)
+{
+    $.ajax({
+        type: "GET",
+        url: $url,
+        beforeSend: function()
+        {
+            showTableLoadingSpinner();
+        },
+        success: function (response) {
+            $('body .theme_table_main_div').html(response);
+            hideSpinnerShowTableContent();
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1196,6 +1268,95 @@ function onClickCorrectOptionBackBtn()
         $("#add_mcq_modal .correct_option_input").val('');
     });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showTableLoadingSpinner()
+{
+    $("body .theme_table_main_div").hide();
+    $("body .theme_spinner_table_main_div").show();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function hideSpinnerShowTableContent()
+{
+    $("body .theme_table_main_div").show();
+    $("body .theme_spinner_table_main_div").hide();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
